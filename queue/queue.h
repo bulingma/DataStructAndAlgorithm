@@ -4,8 +4,8 @@
 * All rights reserved.
 ******************************************************************************************/
 
-#ifndef _QUEUE_H__
-#define _QUEUE_H__
+#ifndef QUEUE_H__
+#define QUEUE_H__
 
 /* 以List为基类 */
 #include "../list/list.h"		

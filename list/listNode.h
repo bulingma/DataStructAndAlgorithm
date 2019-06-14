@@ -4,8 +4,8 @@
 * All rights reserved.
 ******************************************************************************************/
 
-#ifndef _LISTNODE_H__
-#define _LISTNODE_H__
+#ifndef LISTNODE_H__
+#define LISTNODE_H__
 
 typedef int Rank;										/* 秩 */
 #define ListNodePosi(T) ListNode<T>*					/* 列表节点位置 */

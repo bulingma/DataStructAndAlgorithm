@@ -1,9 +1,8 @@
 /******************************************************************************************
- * Data Structures And Algorithm in C++
- * Junhui DENG, deng@tsinghua.edu.cn
- * Computer Science & Technology, Tsinghua University
- * Copyright (c) 2006-2013. All rights reserved.
- ******************************************************************************************/
+* Data Structures and Algorithm in C++ .
+* Junhui DENG(deng@tsinghua.edu.cn) is first author, Yuguang Ma learn¡¢add and modify it .
+* All rights reserved.
+******************************************************************************************/
 
 #pragma warning(disable : 4996 4800)
 #include "../_share/util.h"

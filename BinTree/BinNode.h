@@ -4,8 +4,8 @@
 * All rights reserved.
 ******************************************************************************************/
 
-#ifndef _BINNODE_H__
-#define _BINNODE_H__
+#ifndef BINNODE_H__
+#define BINNODE_H__
 
 #include "../stack/stack@list.h"			/* 引入栈模板类 */
 #include "../queue/queue.h"					/* 引入队列模板类 */

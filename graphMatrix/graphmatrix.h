@@ -4,8 +4,8 @@
 * All rights reserved.
 ******************************************************************************************/
 
-#ifndef _GRAPHMATRIX_H__
-#define _GRAPHMATRIX_H__
+#ifndef GRAPHMATRIX_H__
+#define GRAPHMATRIX_H__
 
 #include "../vector/vector.h"				/* 引入向量 */
 #include "../GraphMatrix/graph.h"			/* 引入图ADT */

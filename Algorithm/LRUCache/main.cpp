@@ -108,3 +108,4 @@ int main()
 	testLRUCache<int, int>(iTestSize); //元素类型可以在这里任意选择
 	return 0;
 }
+

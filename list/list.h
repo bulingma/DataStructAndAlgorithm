@@ -4,8 +4,8 @@
 * All rights reserved.
 ******************************************************************************************/
 
-#ifndef _LIST_H__
-#define _LIST_H__
+#ifndef LIST_H__
+#define LIST_H__
 
 #include "listNode.h"								/* 引入列表节点类 */
 
