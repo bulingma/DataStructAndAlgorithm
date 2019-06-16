@@ -27,9 +27,7 @@ protected:
 	void mergeSort(Rank lo, Rank hi);						/* 归并排序算法 */
 	Rank partition(Rank lo, Rank hi);						/* 轴点构造算法 */
 	void quickSort(Rank lo, Rank hi);						/* 快速排序算法 */
-
-	/* 暂未理解，后期待学习 */
-	// void heapSort(Rank lo, Rank hi);						/* 堆排序（稍后结合完全堆讲解） */
+	void heapSort(Rank lo, Rank hi);						/* 堆排序 */
 
 public:
 	/* 构造函数 */
@@ -99,7 +97,8 @@ public:
 
 /* 以数组区间A[lo, hi)为蓝本复制向量 */
 template <typename T>										/* 元素类型 */
-void Vector<T>::copyFrom(T const* A, Rank lo, Rank hi) {
+void Vector<T>::copyFrom(T const* A, Rank lo, Rank hi) 
+{
 	_elem = new T[_capacity = 2 * (hi - lo)];				/* 分配空间，规模清零 */
 	_size = 0;
 	while (lo < hi)											/* A[lo, hi)内的元素逐一 */
@@ -230,23 +229,23 @@ void Vector<T>::quickSort(Rank lo, Rank hi) {				/* 0 <= lo < hi <= size */
 	quickSort(mi + 1, hi);									/* 对后缀递归排序 */
 }
 
-///* 向量堆排序 */
-//template <typename T>
-//void Vector<T>::heapSort(Rank lo, Rank hi) {				//0 <= lo < hi <= size
-//															/*DSA*/
-//	printf("\tHEAPsort [%3d, %3d)\n", lo, hi);
-//	PQ_ComplHeap<T> H(_elem + lo, hi - lo);					//将待排序区间建成一个完全二叉堆，O(n)
-//	while (!H.empty())										//反复地摘除最大元并归入已排序的后缀，直至堆空
-//															/*DSA*/
-//	{
-//		_elem[--hi] = H.delMax();							//等效于堆顶与末元素对换后下滤
-//															/*DSA*/
-//		for (int i = lo; i < hi; i++) print(H[i]);
-//		print(_elem[hi]);
-//		printf("\n");
-//		/*DSA*/
-//	}
-//}
+/* 向量堆排序 */
+template <typename T>
+void Vector<T>::heapSort(Rank lo, Rank hi) {				//0 <= lo < hi <= size
+															/*DSA*/
+	printf("\tHEAPsort [%3d, %3d)\n", lo, hi);
+	PQ_ComplHeap<T> H(_elem + lo, hi - lo);					//将待排序区间建成一个完全二叉堆，O(n)
+	while (!H.empty())										//反复地摘除最大元并归入已排序的后缀，直至堆空
+															/*DSA*/
+	{
+		_elem[--hi] = H.delMax();							//等效于堆顶与末元素对换后下滤
+															/*DSA*/
+		for (int i = lo; i < hi; i++) print(H[i]);
+		print(_elem[hi]);
+		printf("\n");
+		/*DSA*/
+	}
+}
 
 /* 返回向量中逆序相邻元素对的总数 */
 template <typename T>
@@ -349,7 +348,7 @@ void Vector<T>::sort(Rank lo, Rank hi) {
 	case 1:  bubbleSort(lo, hi); break;						/* 起泡排序 */
 	case 2:  selectionSort(lo, hi); break;					/* 选择排序（习题） */
 	case 3:  mergeSort(lo, hi); break;						/* 归并排序 */
-	//case 4:  heapSort(lo, hi); break;						/* 堆排序（稍后介绍） */
+	case 4:  heapSort(lo, hi); break;						/* 堆排序 */
 	default: quickSort(lo, hi); break;						/* 快速排序（稍后介绍） */
 	}
 	/*DSA*/													/* selectionSort(lo, hi); */
