@@ -118,7 +118,7 @@
     <ClInclude Include="pq_leftheap.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\pq_complheap\pq_test.cpp" />
+    <ClCompile Include="..\pq\pq_test.cpp" />
     <ClCompile Include="..\uniprint\print_basic.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

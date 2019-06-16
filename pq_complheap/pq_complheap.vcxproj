@@ -118,8 +118,8 @@
     <ClInclude Include="pq_complheap.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\pq\pq_test.cpp" />
     <ClCompile Include="..\uniprint\print_basic.cpp" />
-    <ClCompile Include="pq_test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

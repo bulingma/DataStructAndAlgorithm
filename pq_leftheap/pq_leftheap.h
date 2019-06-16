@@ -33,9 +33,9 @@ template <typename T>
 void PQ_LeftHeap<T>::insert(T e)
 { 
 	BinNodePosi(T) v = new BinNode<T>(e);				//为e创建一个二叉树节点
-	this->_root = merge(this->_root, v);							//通过合并完成新节点的插入
+	this->_root = merge(this->_root, v);				//通过合并完成新节点的插入
 	//   _root->parent = NULL;							//既然此时堆非空，还需相应设置父子链接
-	this->_size++;											//更新规模
+	this->_size++;										//更新规模
 }
 
 //获取非空左式堆中优先级最高的词条
@@ -49,12 +49,12 @@ T PQ_LeftHeap<T>::getMax()
 template <typename T>
 T PQ_LeftHeap<T>::delMax()
 { 
-	BinNodePosi(T) lHeap = this->_root->lc;					//左子堆
-	BinNodePosi(T) rHeap = this->_root->rc;					//右子堆
+	BinNodePosi(T) lHeap = this->_root->lc;				//左子堆
+	BinNodePosi(T) rHeap = this->_root->rc;				//右子堆
 	T e = this->_root->data;
-	delete this->_root;										//删除根节点
+	delete this->_root;									//删除根节点
 	this->_size--;
-	this->_root = merge(lHeap, rHeap);						//原左右子堆合并
+	this->_root = merge(lHeap, rHeap);					//原左右子堆合并
 	//   if ( _root ) _root->parent = NULL;				//若堆非空，还需相应设置父子链接
 	return e;											//返回原根节点的数据项
 }

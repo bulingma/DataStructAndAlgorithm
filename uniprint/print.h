@@ -20,6 +20,7 @@
 #include "../BTree/BTree.h"							/* 二叉搜索树（B-树） */
 #include "../Hashtable/Entry.h"						/* 词条 */
 #include "../Hashtable/Hashtable.h"					/* 散列表 */
+#include "../PQ_List/PQ_List.h"						/* 基于列表实现的优先级队列 */
 #include "../PQ_ComplHeap/PQ_ComplHeap.h"			/* 基于完全堆实现的优先级队列 */
 #include "../PQ_LeftHeap/PQ_LeftHeap.h"				/* 基于左式堆实现的优先级队列 */
 #include "../graphMatrix/Graph.h"					/* 图 */
@@ -56,6 +57,7 @@ public:
    template <typename T> static void p(AVL<T>&);									/* AVL */
    template <typename T> static void p(RedBlack<T>&);								/* RedBlack */
    template <typename K, typename V> static void p(Hashtable<K, V>&);				/* Hashtable */
+   template <typename T> static void p(PQ_List<T>&);								/* PQ_List */
    template <typename T> static void p(PQ_ComplHeap<T>&);							/* PQ_ComplHeap */
    template <typename T> static void p(PQ_LeftHeap<T>&);							/* PQ_LeftHeap */
    template <typename Tv, typename Te> static void p(GraphMatrix<Tv, Te>&);			/* Graph */
@@ -71,6 +73,7 @@ public:
 #include "Print_BTree.h"
 #include "Print_Entry.h"
 #include "Print_Hashtable.h"
+#include "Print_PQ_List.h"
 #include "Print_PQ_ComplHeap.h"
 #include "Print_PQ_LeftHeap.h"
 #include "Print_graphmatrix.h"

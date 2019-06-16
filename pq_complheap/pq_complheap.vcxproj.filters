@@ -20,10 +20,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pq_test.cpp">
+    <ClCompile Include="..\uniprint\print_basic.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\uniprint\print_basic.cpp">
+    <ClCompile Include="..\pq\pq_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
